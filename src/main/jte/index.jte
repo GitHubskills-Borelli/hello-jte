@@ -4,6 +4,7 @@
 @param String name
 @param List<String> items
 @param Page page
+@param int cni
 
 <!doctype html>
 <html lang="en">
@@ -19,7 +20,11 @@
 </head>
 <body>
 
-    <h1>Hello, ${name}!</h1>
+    @if(cni == 0)
+        <p> cni is null</p>
+    @else
+        <h1>Hello, ${name}! your cni id is ${cni}</h1>
+    @endif
 
     <%-- this comment will not render ${name} --%>
 
